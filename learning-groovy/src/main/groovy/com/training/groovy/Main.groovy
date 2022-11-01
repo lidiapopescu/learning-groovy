@@ -9,7 +9,9 @@ class Main {
 		
 		classInstatiationAndErrorHandling()
 		
-		calculator()
+		usingCalculatorClassInstance()
+		
+		usingAnnotations()
     }
 	
 	
@@ -84,7 +86,7 @@ class Main {
 		println person.getFirstName().takeRight(2)
 	}
 	
-	private static void calculator() {
+	private static void usingCalculatorClassInstance() {
 		
 		Calculator calculator = new Calculator();
 		assert calculator.add(3, 4) == 7
@@ -98,5 +100,19 @@ class Main {
 		
 		assert calculator.divide( 10, 3) == 3.3333333f
 		println calculator.divide(10, 0)
+	}
+	
+	private static void usingAnnotations() {
+		
+		Employee johnDoe = new Employee()
+		johnDoe.setFirstName("John")
+		johnDoe.setLastName("Doe")
+		johnDoe.setAge(40)
+
+		assert johnDoe.toString() == "Employee(John, Doe, 40)"
+		println johnDoe.toString()
+		assert johnDoe.equals(johnDoe)
+		assert !johnDoe.equals(new Employee(firstName: "Mary", lastName: "Hill", age: 30))
+		assert new Employee("Mary", "Hill", 30).toString() == "Employee(Mary, Hill, 30)"
 	}
 }
