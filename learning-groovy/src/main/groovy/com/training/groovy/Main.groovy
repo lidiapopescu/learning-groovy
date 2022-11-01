@@ -109,10 +109,12 @@ class Main {
 		johnDoe.setLastName("Doe")
 		johnDoe.setAge(40)
 
-		assert johnDoe.toString() == "Employee(John, Doe, 40)"
+		assert johnDoe.toString() == "com.training.groovy.Employee(John, Doe, 40)"
 		println johnDoe.toString()
 		assert johnDoe.equals(johnDoe)
+		println "johnDoe.equals(johnDoe) = " + johnDoe.equals(johnDoe)
 		assert !johnDoe.equals(new Employee(firstName: "Mary", lastName: "Hill", age: 30))
-		assert new Employee("Mary", "Hill", 30).toString() == "Employee(Mary, Hill, 30)"
+		println "!johnDoe.equals(new Employee(firstName: \"Mary\", lastName: \"Hill\", age: 30)) =  "+ !johnDoe.equals(new Employee(firstName: "Mary", lastName: "Hill", age: 30))
+		assert new Employee("Mary", "Hill", 30).toString() == "com.training.groovy.Employee(Mary, Hill, 30)"
 	}
 }
