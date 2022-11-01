@@ -1,14 +1,17 @@
 package com.training.groovy
 
+import groovy.transform.Canonical
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 import groovy.transform.TupleConstructor
 
 // Declare convenience annotations on class-level
 // originally all relevant boilerplate code has been added to support functionality
-@ToString
-@EqualsAndHashCode
-@TupleConstructor
+//@ToString
+//@EqualsAndHashCode
+//@TupleConstructor
+// Canonical annotation aggregates functionality of all above annotations used previously
+@Canonical
 class Employee {
 	
 	String firstName
