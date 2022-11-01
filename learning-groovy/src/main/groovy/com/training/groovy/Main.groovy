@@ -3,12 +3,13 @@ package com.training.groovy
 class Main {
     
     static void main(String[] args) {
-        println "Hello World"
+		println "Hello Groovy World !"
 		
 		variablesDataTypes()
 		
 		classInstatiationAndErrorHandling()
 		
+		calculator()
     }
 	
 	
@@ -32,7 +33,7 @@ class Main {
 		println name.getClass()
 	}
 	
-	private static classInstatiationAndErrorHandling() {
+	private static void classInstatiationAndErrorHandling() {
 		
 		// Create new Person class and instantiate it
 		// Getters and setters are automatically created
@@ -58,7 +59,8 @@ class Main {
 		
 		// Iterate over Person instances in list
 		for (Person p : persons) {
-			println p.getFullName()
+			println p.getFullName() + " has " + p.getAge() + " Years old."
+//			println p.getFirstName().dropRight(2)
 		}
 		
 		// Handling Exceptions
@@ -69,8 +71,32 @@ class Main {
 			// Exception in thread "main" java.lang.NumberFormatException: For input string: "Lidia"
 		} catch (NumberFormatException e) {
 			assert e instanceof NumberFormatException
-			e.printStackTrace()
+//			e.printStackTrace()
 			println "Cannot convert a String into a Long"
 		}
+		
+		// Use the dropRight method to remove 2 characters from the end
+		println ""
+//		Exception in thread "main" groovy.lang.MissingMethodException: No signature of method: java.lang.String.dropRight() is applicable for argument types: (LinkedHashMap) values: [[num:2]]
+//		println person.getFirstName().dropRight(num: 2)
+		println person.getFirstName()
+		println person.getFirstName().dropRight(2)
+		println person.getFirstName().takeRight(2)
+	}
+	
+	private static void calculator() {
+		
+		Calculator calculator = new Calculator();
+		assert calculator.add(3, 4) == 7
+		println calculator.add(3, 4)
+		
+		assert calculator.substract(5, 10) == -5
+		println calculator.substract(5, 10)
+		
+		assert calculator.multiply(3, 4) == 12
+		println calculator.multiply(3, 4)
+		
+		assert calculator.divide( 10, 3) == 3.3333333f
+		println calculator.divide(10, 0)
 	}
 }
