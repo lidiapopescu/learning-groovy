@@ -18,6 +18,8 @@ class Main {
 		usingCollections()
 		
 		usingFiles()
+		
+		processingNumbersChallange()
     }
 	
 	
@@ -140,5 +142,12 @@ class Main {
 		WorkingWithFilesDemo rDemo = new WorkingWithFilesDemo()
 		rDemo.readingFiles()
 		rDemo.writingFiles()
-	} 
+	}
+	
+	private static void processingNumbersChallange() {
+		
+		ProcessingNumbersDemo pDemo = new ProcessingNumbersDemo()
+		pDemo.challangeMyVersion()
+		pDemo.challangeSolutionVersion()
+	}
 }
