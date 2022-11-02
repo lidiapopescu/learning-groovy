@@ -12,7 +12,7 @@ import groovy.transform.TupleConstructor
 //@TupleConstructor
 // Canonical annotation aggregates functionality of all above annotations used previously
 @Canonical
-class Employee {
+class Employee implements Serializable {
 	
 	String firstName
 	String lastName

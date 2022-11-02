@@ -16,6 +16,8 @@ class Main {
 		usingClosures()
 		
 		usingCollections()
+		
+		usingFiles()
     }
 	
 	
@@ -83,8 +85,6 @@ class Main {
 		
 		// Use the dropRight method to remove 2 characters from the end
 		println ""
-//		Exception in thread "main" groovy.lang.MissingMethodException: No signature of method: java.lang.String.dropRight() is applicable for argument types: (LinkedHashMap) values: [[num:2]]
-//		println person.getFirstName().dropRight(num: 2)
 		println person.getFirstName()
 		println person.getFirstName().dropRight(2)
 		println person.getFirstName().takeRight(2)
@@ -134,4 +134,11 @@ class Main {
 		CollectionsDemo cDemo = new CollectionsDemo()
 		cDemo.collectionsDemo()
 	}
+	
+	private static void usingFiles() {
+		
+		WorkingWithFilesDemo rDemo = new WorkingWithFilesDemo()
+		rDemo.readingFiles()
+		rDemo.writingFiles()
+	} 
 }
