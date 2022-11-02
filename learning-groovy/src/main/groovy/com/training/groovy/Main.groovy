@@ -12,6 +12,8 @@ class Main {
 		usingCalculatorClassInstance()
 		
 		usingAnnotations()
+		
+		usingClosures()
     }
 	
 	
@@ -116,5 +118,12 @@ class Main {
 		assert !johnDoe.equals(new Employee(firstName: "Mary", lastName: "Hill", age: 30))
 		println "!johnDoe.equals(new Employee(firstName: \"Mary\", lastName: \"Hill\", age: 30)) =  "+ !johnDoe.equals(new Employee(firstName: "Mary", lastName: "Hill", age: 30))
 		assert new Employee("Mary", "Hill", 30).toString() == "com.training.groovy.Employee(Mary, Hill, 30)"
+	}
+	
+	
+	private static void usingClosures() {
+		
+		ClosureDemo cDemo = new ClosureDemo();
+		cDemo.closureDemo()
 	}
 }
