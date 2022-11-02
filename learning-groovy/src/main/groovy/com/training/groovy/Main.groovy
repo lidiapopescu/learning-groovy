@@ -14,6 +14,8 @@ class Main {
 		usingAnnotations()
 		
 		usingClosures()
+		
+		usingCollections()
     }
 	
 	
@@ -123,7 +125,13 @@ class Main {
 	
 	private static void usingClosures() {
 		
-		ClosureDemo cDemo = new ClosureDemo();
+		ClosureDemo cDemo = new ClosureDemo()
 		cDemo.closureDemo()
+	}
+	
+	private static void usingCollections() {
+		
+		CollectionsDemo cDemo = new CollectionsDemo()
+		cDemo.collectionsDemo()
 	}
 }
